@@ -1,0 +1,41 @@
+---
+title: Dhanesh · Projects
+description: A hub for projects published on GitHub Pages by Dhanesh Purohit.
+template: splash
+hero:
+  tagline: A small hub linking to my projects published on GitHub Pages.
+  actions:
+    - text: Engineering Tradeoffs
+      link: https://dhanesh.github.io/engineering-tradeoffs/
+      icon: right-arrow
+      variant: primary
+    - text: IT Operations Field Guide
+      link: https://dhanesh.github.io/it-operations-field-guide/
+      icon: right-arrow
+      variant: secondary
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Projects
+
+<CardGrid>
+  <LinkCard
+    title="Engineering Tradeoffs"
+    href="https://dhanesh.github.io/engineering-tradeoffs/"
+    description="An interactive, decision-oriented software engineering handbook."
+  />
+  <LinkCard
+    title="IT Operations Field Guide"
+    href="https://dhanesh.github.io/it-operations-field-guide/"
+    description="A practical field guide for IT operations."
+  />
+</CardGrid>
+
+<CardGrid>
+  <Card title="About this site" icon="open-book">
+    Built with [Astro](https://astro.build) and
+    [Starlight](https://starlight.astro.build), deployed to GitHub Pages.
+    Source on [GitHub](https://github.com/dhanesh/dhanesh.github.io).
+  </Card>
+</CardGrid>
