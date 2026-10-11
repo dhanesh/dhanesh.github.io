@@ -2,40 +2,49 @@
 title: Dhanesh · Projects
 description: A hub for projects published on GitHub Pages by Dhanesh Purohit.
 template: splash
+prev: false
+next: false
 hero:
-  tagline: A small hub linking to my projects published on GitHub Pages.
+  tagline: Software and guides I publish on GitHub Pages, refreshed nightly.
   actions:
-    - text: Engineering Tradeoffs
-      link: https://dhanesh.github.io/engineering-tradeoffs/
+    - text: Software
+      link: '#software'
       icon: right-arrow
       variant: primary
-    - text: IT Operations Field Guide
-      link: https://dhanesh.github.io/it-operations-field-guide/
+    - text: Guides
+      link: '#guides'
       icon: right-arrow
       variant: secondary
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import projects from '../../data/projects.json';
 
-## Projects
+export const software = projects.filter((p) => p.category === 'software');
+export const guides = projects.filter((p) => p.category === 'guides');
+
+## Software
 
 <CardGrid>
-  <LinkCard
-    title="Engineering Tradeoffs"
-    href="https://dhanesh.github.io/engineering-tradeoffs/"
-    description="An interactive, decision-oriented software engineering handbook."
-  />
-  <LinkCard
-    title="IT Operations Field Guide"
-    href="https://dhanesh.github.io/it-operations-field-guide/"
-    description="A practical field guide for IT operations."
-  />
+  {software.map((p) => (
+    <LinkCard title={p.title} href={p.url} description={p.description} />
+  ))}
+</CardGrid>
+
+## Guides
+
+<CardGrid>
+  {guides.map((p) => (
+    <LinkCard title={p.title} href={p.url} description={p.description} />
+  ))}
 </CardGrid>
 
 <CardGrid>
   <Card title="About this site" icon="open-book">
     Built with [Astro](https://astro.build) and
     [Starlight](https://starlight.astro.build), deployed to GitHub Pages.
-    Source on [GitHub](https://github.com/dhanesh/dhanesh.github.io).
+    The project list is pulled nightly from my public repositories that
+    publish a GitHub Pages site. Source on
+    [GitHub](https://github.com/dhanesh/dhanesh.github.io).
   </Card>
 </CardGrid>
