@@ -1,0 +1,13 @@
+{
+  "engineering-tradeoffs": {
+    "title": "Engineering Tradeoffs",
+    "description": "An interactive, decision-oriented software engineering handbook."
+  },
+  "it-operations-field-guide": {
+    "title": "IT Operations Field Guide",
+    "description": "A practical field guide for IT operations."
+  },
+  "albauth": { "title": "albauth" },
+  "mockstar": { "title": "mockstar" },
+  "ubilink": { "title": "ubilink" }
+}

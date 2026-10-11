@@ -1,6 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+// Refreshed from GitHub by scripts/fetch-projects.mjs (prebuild + nightly CI).
+import projects from './src/data/projects.json' with { type: 'json' };
+
+/** @param {'software' | 'guides'} category */
+const sidebarLinks = (category) =>
+  projects
+    .filter((p) => p.category === category)
+    .map((p) => ({
+      label: p.title,
+      link: p.url,
+      attrs: { target: '_blank', rel: 'noopener' },
+    }));
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,22 +32,9 @@ export default defineConfig({
         },
       ],
       sidebar: [
-        {
-          label: 'Projects',
-          items: [
-            { label: 'Overview', link: '/' },
-            {
-              label: 'Engineering Tradeoffs',
-              link: 'https://dhanesh.github.io/engineering-tradeoffs/',
-              attrs: { target: '_blank', rel: 'noopener' },
-            },
-            {
-              label: 'IT Operations Field Guide',
-              link: 'https://dhanesh.github.io/it-operations-field-guide/',
-              attrs: { target: '_blank', rel: 'noopener' },
-            },
-          ],
-        },
+        { label: 'Overview', link: '/' },
+        { label: 'Software', items: sidebarLinks('software') },
+        { label: 'Guides', items: sidebarLinks('guides') },
       ],
     }),
   ],

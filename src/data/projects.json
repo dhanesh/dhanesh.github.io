@@ -1,0 +1,42 @@
+[
+  {
+    "name": "albauth",
+    "title": "albauth",
+    "description": "An MCP server that lets a model call HTTP APIs behind an AWS ALB authenticate-oidc rule. One browser login, then requests just work.",
+    "url": "https://dhanesh.github.io/albauth/",
+    "repo": "https://github.com/dhanesh/albauth",
+    "category": "software"
+  },
+  {
+    "name": "engineering-tradeoffs",
+    "title": "Engineering Tradeoffs",
+    "description": "An interactive, decision-oriented software engineering handbook.",
+    "url": "https://dhanesh.github.io/engineering-tradeoffs/",
+    "repo": "https://github.com/dhanesh/engineering-tradeoffs",
+    "category": "guides"
+  },
+  {
+    "name": "it-operations-field-guide",
+    "title": "IT Operations Field Guide",
+    "description": "A practical field guide for IT operations.",
+    "url": "https://dhanesh.github.io/it-operations-field-guide/",
+    "repo": "https://github.com/dhanesh/it-operations-field-guide",
+    "category": "guides"
+  },
+  {
+    "name": "mockstar",
+    "title": "mockstar",
+    "description": "Bun-based mock server: static + dynamic mocking from JSON config, provider-accurate webhook signing (GitHub/Slack/Stripe/Shopify/Razorpay), pass-through proxy, multi-tenancy, and an SDET library embed.",
+    "url": "https://dhanesh.github.io/mockstar/",
+    "repo": "https://github.com/dhanesh/mockstar",
+    "category": "software"
+  },
+  {
+    "name": "ubilink",
+    "title": "ubilink",
+    "description": "An open-source, cross-platform desktop app for ubiquitous linking - a faithful, extensible implementation of the Linking Manifesto <https://linkingmanifesto.org/>.",
+    "url": "https://dhanesh.github.io/ubilink/",
+    "repo": "https://github.com/dhanesh/ubilink",
+    "category": "software"
+  }
+]
